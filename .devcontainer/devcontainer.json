@@ -1,0 +1,5 @@
+{
+  "name": "ROS2 Humble DevContainer",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04",
+  "postCreateCommand": "sudo apt update && sudo apt install -y curl gnupg lsb-release && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc"
+}
