@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Setup ROS 2
+    init: |
+      source /opt/ros/humble/setup.bash
+      echo "ROS 2 configurado no Gitpod!"
+    command: |
+      bash
