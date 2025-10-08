@@ -1,5 +1,23 @@
 {
-  "name": "ROS2 Humble DevContainer",
-  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04",
-  "postCreateCommand": "sudo apt update && sudo apt install -y curl gnupg lsb-release && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc"
+  "name": "ROS 2 Development (Ubuntu)",
+  "image": "ghcr.io/devcontainers/base:ubuntu",
+  "features": {
+    // Isso instala a distribuição ROS 2 (ex: Humble, Iron) em uma base Ubuntu
+    "ghcr.io/devcontainers/features/ros:1": {
+      "rosDistro": "humble", // Altere para a distro do ROS 2 que você precisa
+      "installROS1": "false"
+    }
+  },
+  // Aqui você pode adicionar as extensões do VS Code para ROS
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "vscode-icons-team.vscode-icons",
+        "GitHub.codespaces"
+        // Você também pode procurar por extensões específicas de ROS
+      ]
+    }
+  },
+  "remoteUser": "vscode"
 }
